@@ -34,6 +34,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ---
 name: Bandit
+jobs:
+  build:
+    name: Bandit
+    runs-on: ubuntu-latest
+    
+  permissions:
+      contents: read
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+steps:
+  - name: Use Bandit on code
    uses: shundor/bandit-action@v1
     with: 
         path: "."
