@@ -12,18 +12,18 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@5a4ac9002d1ac3e1a3a56b7bcb08096e1b8bfa7a  # v5
         with:
           fetch-depth: 0
           persist-credentials: false
 
       - name: Super-linter
-        uses: super-linter/super-linter@v8.2.1
+        uses: super-linter/super-linter@9c71b206a6acfdde633b68b7dd0c2f2e8f77c225  # v7.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Bandit Scan
-        uses: shundor/python-bandit-scan@v1.0
+        uses: shundor/python-bandit-scan@2fdb03dfd713dfd6a4f5ac9d694f67d5a453b8c8  # v1.0
         with:
           path: "."
           level: high
