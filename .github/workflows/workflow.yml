@@ -18,14 +18,14 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Super-linter
-        uses: super-linter/super-linter@v8.2.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
       - name: Bandit Scan
         uses: tj-actions/bandit@v5.2
         with:
           targets: "."
           severity: high
           confidence: high
+      - name: Super-linter
+        uses: super-linter/super-linter@v8.2.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
