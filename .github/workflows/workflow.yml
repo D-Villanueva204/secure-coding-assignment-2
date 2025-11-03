@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@5a4ac9002d1ac3e1a3a56b7bcb08096e1b8bfa7a  # v5
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29  # v5
         with:
           fetch-depth: 0
           persist-credentials: false
