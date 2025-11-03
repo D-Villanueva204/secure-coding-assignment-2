@@ -24,9 +24,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
       - name: Bandit Scan
-        uses: PyCQA/bandit-action@v1
+        uses: tj-actions/bandit@v5.2
         with:
-          path: "."
-          level: high
+          targets: "."
+          severity: high
           confidence: high
-          exit_zero: true
