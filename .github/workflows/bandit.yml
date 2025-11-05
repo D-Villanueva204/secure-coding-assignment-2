@@ -19,3 +19,7 @@ jobs:
           persist-credentials: false
       - name: Bandit Scan
         uses: shundor/python-bandit-scan@v1.0
+        with:
+          targets: "."
+          severity: high
+          confidence: high
