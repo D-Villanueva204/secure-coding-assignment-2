@@ -19,7 +19,3 @@ jobs:
           persist-credentials: false
       - name: Bandit Scan
         uses: tj-actions/bandit@v5.2
-        with:
-          targets: "."
-          severity: high
-          confidence: high
