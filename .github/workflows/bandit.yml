@@ -18,10 +18,8 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Bandit Scan
-        uses: shundor/python-bandit-scan@v1.0
+        uses: tj-actions/bandit@v5.2
         with:
           targets: "."
           severity: high
           confidence: high
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
