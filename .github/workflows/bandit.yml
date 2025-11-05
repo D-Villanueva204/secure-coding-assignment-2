@@ -23,3 +23,5 @@ jobs:
           targets: "."
           severity: high
           confidence: high
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
