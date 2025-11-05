@@ -18,4 +18,4 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Bandit Scan
-        uses: tj-actions/bandit@v5.2
+        uses: shundor/python-bandit-scan@v1.0
